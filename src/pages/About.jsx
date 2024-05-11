@@ -1,24 +1,125 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { faDownload } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
+import { experiences, skills } from '../constants';
+
+const ExperienceCard = ({ experience }) => (
+  <VerticalTimelineElement
+    contentStyle={{ background: 'rgb(255,245,238)', color: '#fff'}}
+    contentArrowStyle={{ borderRight: '7px solid #fff5ee'}}
+    date={experience.date}
+    dateClassName={'text-[#000]'}
+    dateInnerStyle={{ background: '#61b8ff', color: '#000' }}
+    iconStyle={{ background: experience.iconBg }}
+    icon={
+      <div className="flex justify-center items-center w-full h-full">
+        <img 
+          src={experience.icon}
+          alt={experience.company_name}
+          className="w-[60%] h-[60%] object-contain"
+        />
+      </div>
+    }
+  >
+    <div>
+      <h3 className="text-slate-950 text-[24px] font-bold font-mono">
+          {experience.title}
+      </h3>
+      <p className="text-secondary text-[16px] font-semibold text-slate-950 font-mono" style={{ margin: 0}}>
+        {experience.company_name}
+      </p>
+    </div>
+    <ul className="mt-5 list-disc ml-5 space-y-2">
+        {experience.points.map((point, index) => (
+          <li kay={`experience-point-${index}`} className="text-white-100 text-[14px] pl-1 tracking-wider text-slate-950 font-mono">
+              {point}
+          </li>
+        ))}
+    </ul>
+
+  </VerticalTimelineElement>
+)
 
 const About = () => {
+
+
+  const [dark, setDark] = useState(false);
+
+    const darkModeHandler = () => {
+        setDark(!dark);
+        document.body.classList.toggle("dark");
+    }
+
+    const WorkIcon = () => <></>;
+
   return (
-    <div className="about">
-      <h2>About Me</h2>
-      <p>
-        I am a passionate individual who loves coding and exploring new technologies. 
-        My journey in the world of programming started several years ago, and since then,
-        I have been continuously learning and growing.
-      </p>
-      <p>
-        My expertise lies in frontend and backend development, with proficiency in 
-        languages like JavaScript, Python, and Java. I enjoy building scalable and 
-        efficient web applications using frameworks like React.js and Node.js.
-      </p>
-      <p>
-        Apart from coding, I also have a keen interest in UX/UI design and product 
-        management. I believe in the power of teamwork and collaboration to achieve 
-        great results.
-      </p>
+    <div className="about pt-14 w-full flex flex-col">
+      <div className='header p-2.5 flex flex-col justify-center items-center'>
+        <div className='text-justify max-w-5xl'>
+          <h2 className='text-center text-6xl pb-2.5 font-mono text-[#e65101]'>
+            About me 
+          </h2>
+          <span className='font-mono'>
+            Hi there, my name is Prem MANN and I'm a software developer with experience in web application 
+            development. I'm currently working as a frontend Developer at Krawma & Associates, 
+            where I specialize in billing systems development and optimizing applications for maximum speed and scalability. 
+            My expertise in front-end development includes proficiency in technologies such as JavaScript, React.js, and Tailwind CSS. 
+            In addition, I have experience working with PHP and React Native.
+          </span>
+        </div>
+        <div className='pb-2 flex justify-center pt-3.5'>
+              <a className='flex flex-row justify-between pl-3 content-center  text-[#541600]
+                            w-[170px] items-center border border-[#e65101] rounded-full cursor-pointer
+                            hover:bg-[#e65101] hover:text-white'>
+                <span className='font-mono'>Download CV</span>
+                <FontAwesomeIcon className='border border-[#e65101] bg-[#e65101] p-2.5 rounded-full' icon={faDownload} />
+              </a>
+            </div>
+      </div>
+
+      <div className='flex flex-col justify-center items-center w-full'>
+        <div className='max-w-5xl w-full'>
+            <div className='skill-header text-center pb-2.5'>
+              <h2 className='text-center text-3xl pb-2.5 font-mono text-[#e65101]'>
+                My Skill
+              </h2>
+              <span className='font-italic text-center w-full'>Some of various tools that I have used so far.</span>
+            </div>
+            <div className='skill-lists grid grid-cols-2 md:grid-cols-3 gap-2 w-full place-items-center'>
+              
+              {skills.map((skill, index) => (
+                  <div key={index} class="bg-[#FFF5EE] dark:bg-slate-800 rounded-lg p-2.5 ring-1 ring-slate-900/5 
+                    shadow-xl flex flex-col w-full h-full justify-around py-1 col-span">
+                    <div className='flex flex-col items-center justify-self-end'>
+                      <img 
+                        src={skill.icon}
+                        alt={skill.label}
+                        className="w-[60%] h-[60] object-contain"
+                      />
+                    </div>
+                    <div className='text-center px-2.5'>
+                      <span>{skill.label}</span>
+                    </div>
+                  </div>
+              ))}
+          </div>
+        </div>
+      </div>
+      
+      <div className='flex flex-col justify-center items-center max-w-5xl self-center'>
+        <VerticalTimeline 
+            lineColor="#e65101"
+            >
+              {experiences.map((experience, index) => (
+              <ExperienceCard key={index} experience={experience} />
+              ))}
+        </VerticalTimeline>
+  
+      </div>
+
+      
     </div>
   );
 }

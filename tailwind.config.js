@@ -5,8 +5,13 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
     "./node_modules/flowbite/**/*.js",
   ],
+  darkMode: 'selector',
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+      "hero-pattern": "url('/public/herobg.png')",
+    }
+  },
   },
   plugins: [
     require('flowbite/plugin')
