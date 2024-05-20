@@ -5,6 +5,7 @@ import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timel
 import 'react-vertical-timeline-component/style.min.css';
 import { experiences, skills } from '../constants';
 
+
 const ExperienceCard = ({ experience }) => (
   <VerticalTimelineElement
     contentStyle={{ background: 'rgb(255,245,238)', color: '#fff'}}
@@ -58,7 +59,7 @@ const About = () => {
     <div className="about pt-14 w-full flex flex-col">
       <div className='header p-2.5 flex flex-col justify-center items-center'>
         <div className='text-justify max-w-5xl'>
-          <h2 className='text-center text-6xl pb-2.5 font-mono text-[#e65101]'>
+          <h2 className='text-center text-6xl pb-2.5 font-mono text-[#e65101] uppercase'>
             About me 
           </h2>
           <span className='font-mono'>
@@ -76,7 +77,7 @@ const About = () => {
                 <span className='font-mono'>Download CV</span>
                 <FontAwesomeIcon className='border border-[#e65101] bg-[#e65101] p-2.5 rounded-full' icon={faDownload} />
               </a>
-            </div>
+          </div>
       </div>
 
       <div className='flex flex-col justify-center items-center w-full'>
@@ -87,21 +88,20 @@ const About = () => {
               </h2>
               <span className='font-italic text-center w-full'>Some of various tools that I have used so far.</span>
             </div>
-            <div className='skill-lists grid grid-cols-2 md:grid-cols-3 gap-2 w-full place-items-center'>
-              
+            <div className=' grid gap-2 grid-cols-3 max-[360px]:grid-cols-2 md:grid-cols-4 skill-lists w-full place-items-center '>
               {skills.map((skill, index) => (
-                  <div key={index} class="bg-[#FFF5EE] dark:bg-slate-800 rounded-lg p-2.5 ring-1 ring-slate-900/5 
-                    shadow-xl flex flex-col w-full h-full justify-around py-1 col-span">
-                    <div className='flex flex-col items-center justify-self-end'>
-                      <img 
-                        src={skill.icon}
-                        alt={skill.label}
-                        className="w-[60%] h-[60] object-contain"
-                      />
-                    </div>
-                    <div className='text-center px-2.5'>
-                      <span>{skill.label}</span>
-                    </div>
+                  <div key={index} className="bg-[#FFF5EE] dark:bg-slate-800 rounded-lg p-2.5 ring-1 ring-slate-900/5 
+                    shadow-xl flex flex-col w-full justify-between items-center cursor-pointer
+                    transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-10 duration-30">
+                      <div className='basis-1/4'>
+                        <img 
+                          src={skill.icon}
+                          alt={skill.label}
+                          className="w-24 h-28 object-contain"
+                        />          
+                      </div>
+                                
+                      <span className='bg-[#e65101] rounded-full w-full text-center text-white'>{skill.label}</span>
                   </div>
               ))}
           </div>
@@ -109,6 +109,12 @@ const About = () => {
       </div>
       
       <div className='flex flex-col justify-center items-center max-w-5xl self-center'>
+        <div className='skill-header text-center pb-2.5 pt-2.5'>
+              <h2 className='text-center text-3xl pb-2.5 font-mono text-[#e65101]'>
+                WORK EXPERIENCE
+              </h2>
+            <span className='font-italic text-center w-full'>Some of various tools that I have used so far.</span>
+          </div>
         <VerticalTimeline 
             lineColor="#e65101"
             >

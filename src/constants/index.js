@@ -9,10 +9,12 @@ import git from "/public/tech/git.png";
 import Bootstrap from "/public/tech/bootstrap.png";
 import tailwind from "/public/tech/tailwind.png";
 import Javascript from "/public/tech/javascript.png";
+import { icon } from "@fortawesome/fontawesome-svg-core";
+import { faDownload, faEnvelope, faLocationDot, faEarth, faPhone } from '@fortawesome/free-solid-svg-icons';
 
 const experiences = [
     {
-      title: "React Native Developer",
+      title: "Web development",
       company_name: "Krawma & Associates",
       iconBg: "white",
       icon: krawma,
@@ -57,7 +59,28 @@ const experiences = [
     },
   ];
 
-
+  const contacts = [
+    {
+        icon: faEnvelope,
+        label: 'Email',
+        value: 'Premmannpnc@gmail.com'
+    },
+    {
+        icon: faPhone,
+        label: 'Mobile Number',
+        value: '+855 97 86 01 549'
+    },
+    {
+        icon: faEarth,
+        label: 'Languages',
+        value: 'Khmer, English'
+    },
+    {
+        icon: faLocationDot,
+        label: 'Location',
+        value: 'Phnom Penh, Cambodia'
+    }
+  ];
   const skills = [
     {
         icon: reactjs,
@@ -99,4 +122,4 @@ const experiences = [
   ];
 
 
-  export { experiences, skills};
+  export { experiences, skills, contacts };
