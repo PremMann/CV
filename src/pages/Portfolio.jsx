@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
-import { faDownload } from '@fortawesome/free-solid-svg-icons';
+import { faDownload, faLink } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTelegram, faLinkedin, faFacebook, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { experiences, skills } from '../constants';
 import WorkItem from '../components/WorkItem';
 import profiles from "./../../public/profiles.jpeg";
+import IconHover from '../components/IconHover';
+import btdc from "./../../public/btdc.png";
 
 const Portfolio = () => {
 
@@ -16,28 +18,26 @@ const Portfolio = () => {
             PORTFULIO
           </h2>
         </div>
-        <WorkItem />
-        <div className='flex flex-col justify-center items-center w-full pt-2.5'>
-          <div className='max-w-5xl w-full'>
-              <div className=' grid gap-2 grid-cols-3 max-[360px]:grid-cols-2 md:grid-cols-4 skill-lists w-full place-items-center '>
-                {skills.map((skill, index) => (
-                    <div key={index} className="hover:bg-[#FFF5EE] dark:bg-slate-800 rounded-lg p-2.5 ring-1 ring-slate-900/5 
-                      shadow-xl flex flex-col w-full justify-between items-center cursor-pointer
-                      transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-10 duration-30" style={{ backgroundImage: `url(${profiles})` }}>
-                        <div className='basis-1/4'>
-                          <img 
-                            src={skill.icon}
-                            alt={skill.label}
-                            className="w-24 h-28 object-contain"
-                          />          
-                        </div>
-                                  
-                        <span className='bg-[#e65101] rounded-full w-full text-center text-white'>{skill.label}</span>
-                    </div>
-                ))}
+        <div class="mx-auto max-w-7xl z-10 grid grid-cols-1 gap-10 pt-14 sm:grid-cols-2 lg:grid-cols-3 w-full">
+
+          <div className='group'>
+            <div className='group-hover:hidden bg-orange-500 rounded-md bg-neutral-900/50 p-8 text-center shadow hover:bg-red-500
+              cursor-pointer bg-cover bg-center h-[300px] delay-300' style={{ backgroundImage: `url(${btdc})`}}>
+            </div>
+            <div className='hidden group group-hover:block bg-orange-500 rounded-md bg-neutral-900/50 p-8 text-center shadow hover:bg-[#FFF5EE]
+              cursor-pointer bg-cover bg-center h-[300px] place-content-center shadow-xl delay-300
+              transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-10 duration-30' >
+              <div className='flex flex-col items-center content-center '>
+                <h2 className='text-center text-3xl pb-2.5 font-mono text-[#e65101] uppercase'>
+                  Bongthom.com
+                </h2>
+                <FontAwesomeIcon className='border border-[#e0e0e0] bg-white hover:border-[#e65101] hover:bg-[#e65101] shadow-xl hover:text-white p-2.5 rounded-full cursor-pointer
+                    transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-10 duration-30 w-4 h-4' icon={faLink} />
+              </div>
             </div>
           </div>
-      </div>
+
+          </div>
       </div>
     </div>
   );

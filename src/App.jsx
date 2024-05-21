@@ -9,6 +9,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faUser, faBriefcase, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 const App = () => {
+  const [dark, setDark] = useState();
+
   const [active, setActive] = useState('');
   const navItems = ['Home', 'About', 'Portfolio', 'Contact'];
   const iconMap = {
@@ -17,14 +19,28 @@ const App = () => {
     Portfolio: faBriefcase,
     Contact: faEnvelope,
   };
+
+
+  const darkModeHandler = () => {
+    setDark(!dark);
+    document.body.classList.toggle("dark");
+}
   return (
     <>
-      <nav className='z-50 fixed top-0 left-0 w-full bg-white shadow-md bg-gradient-to-t from-slate-50 to-orange-50'>
+      <div className='absolute right-2.5 top-4'>
+        <div className="flex items-center justify-center w-full my-8">
+          <label for="toggle" className="flex items-center cursor-pointer">
+            <input type="checkbox" id="toggle" className="sr-only peer" onChange={darkModeHandler}/>
+            <div className="block relative bg-blue-900 w-16 h-9 p-1 rounded-full before:absolute before:bg-blue-600 before:w-7 before:h-7 before:p-1 before:rounded-full before:transition-all before:duration-500 before:left-1 peer-checked:before:left-8 peer-checked:before:bg-white"></div>
+          </label>
+        </div>
+      </div>
+
+      <nav className='z-50 fixed top-0 left-0 w-full bg-white shadow-md bg-gradient-to-t from-slate-50 to-orange-50 dark:bg-gradient-to-t dark:from-slate-900 dark:to-slate-900'>
         <ol className='hidden md:flex justify-center'>
           {navItems.map((item, index) => (
             <li key={index} className={`p-2.5 hover:!text-white hover:bg-[#e65101] cursor-pointer ${active === item.toLowerCase() ? 'text-[#e65101]' : ''}`} onClick={()=> {setActive(item.toLowerCase())}}>
               <Link className={`hover:!text-white p-1`} to={`/${item.toLowerCase()}`}>
-                {/* <FontAwesomeIcon className='pr-2' icon={iconMap[item]} /> */}
                 {item}
               </Link>
             </li>
@@ -55,7 +71,7 @@ const App = () => {
         </ol>
       </nav>
 
-      <div className='h-full bg-gradient-to-t from-slate-50 to-orange-50'>
+      <div className='h-full bg-gradient-to-t from-slate-50 to-orange-50 dark:bg-gradient-to-t dark:from-slate-900 dark:to-slate-900'>
         <Routes className='z-0'>
           <Route path='/' element={<Home />}/>
           <Route path='/home' element={<Home />}/>
