@@ -12,8 +12,8 @@ const Home = () => {
           <img className="w-full rotate-90 object-cover rounded-lg" src={homeImage} alt="Modern building architecture" />
         </div>
         <div className="flex flex-col justify-end md:justify-center pb-0 p-10 md:p-10 order-first md:order-last">
-            <h1 className='text-5xl pb-5 font-mono text-[#e65101]'>Hi, I'm Prem. A Frontend Developer</h1>
-            <p className='font-mono pb-2.5 text-[#541600]'>
+            <h1 className='text-5xl pb-5 font-mono text-[#e65101] dark:text-[#FAE3B4]'>Hi, I'm Prem. A Frontend Developer</h1>
+            <p className='font-mono pb-2.5 text-[#541600] dark:text-[#FAE3B4]'>
               I'm a frontend developer based in the city of Phnom Penh, Cambodia. 
               I'm a passionate about creating beautiful and functional websites.
             </p>

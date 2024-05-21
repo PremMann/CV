@@ -36,10 +36,10 @@ const App = () => {
         </div>
       </div>
 
-      <nav className='z-50 fixed top-0 left-0 w-full bg-white shadow-md bg-gradient-to-t from-slate-50 to-orange-50 dark:bg-gradient-to-t dark:from-slate-900 dark:to-slate-900'>
+      <nav className='z-50 fixed top-0 left-0 w-full bg-white shadow-md bg-[#FAE3B4] dark:bg-[#1E4147]'>
         <ol className='hidden md:flex justify-center'>
           {navItems.map((item, index) => (
-            <li key={index} className={`p-2.5 hover:!text-white hover:bg-[#e65101] cursor-pointer ${active === item.toLowerCase() ? 'text-[#e65101]' : ''}`} onClick={()=> {setActive(item.toLowerCase())}}>
+            <li key={index} className={`p-2.5 hover:!text-white hover:bg-[#e65101] dark:text-[#FAE3B4] cursor-pointer ${active === item.toLowerCase() ? 'text-[#e65101]' : ''}`} onClick={()=> {setActive(item.toLowerCase())}}>
               <Link className={`hover:!text-white p-1`} to={`/${item.toLowerCase()}`}>
                 {item}
               </Link>
@@ -71,7 +71,7 @@ const App = () => {
         </ol>
       </nav>
 
-      <div className='h-full bg-gradient-to-t from-slate-50 to-orange-50 dark:bg-gradient-to-t dark:from-slate-900 dark:to-slate-900'>
+      <div className='h-full bg-[#FAE3B4] dark:bg-[#1E4147]'>
         <Routes className='z-0'>
           <Route path='/' element={<Home />}/>
           <Route path='/home' element={<Home />}/>
