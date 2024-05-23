@@ -8,9 +8,17 @@ import css from "/public/tech/css.png";
 import git from "/public/tech/git.png";
 import Bootstrap from "/public/tech/bootstrap.png";
 import tailwind from "/public/tech/tailwind.png";
+import homecv from "/public/homecv.png";
 import Javascript from "/public/tech/javascript.png";
-import { icon } from "@fortawesome/fontawesome-svg-core";
-import { faDownload, faEnvelope, faLocationDot, faEarth, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { 
+  faDownload, 
+  faEnvelope, 
+  faLocationDot, 
+  faEarth, 
+  faPhone } from '@fortawesome/free-solid-svg-icons';
+
+import btdc from "/public/btdc.png";
+import btdccp from "/public/btdccp.png";
 
 const experiences = [
     {
@@ -121,5 +129,26 @@ const experiences = [
 
   ];
 
+  const portfolios = [
+    {
+      id:1,
+      name:'BONGTHOM.COM',
+      link:'bongthom.com',
+      image:btdc
+    },
+    {
+      id:2,
+      name:'Bongthom control panel',
+      link:'account.bongthom.com',
+      image:btdccp
+    },
+    {
+      id:3,
+      name:'PREM PORTFOLIO PAGE',
+      link:'prem.info',
+      image:homecv
+    }
+  ];
 
-  export { experiences, skills, contacts };
+
+  export { experiences, skills, contacts, portfolios };

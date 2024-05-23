@@ -12,25 +12,25 @@ const Contact = () => {
     <div className="about pt-14 w-full flex flex-col h-dvh">
     <div className='header p-2.5 flex flex-col justify-center items-center'>
       <div className='text-justify max-w-5xl'>
-        <h2 className='text-center text-6xl font-mono text-[#e65101] uppercase font-bold w-full'>
+        <h2 className='text-center text-6xl font-mono text-[#e65101] uppercase font-bold w-full dark:text-[#FAE3B4] dark:font-bold'>
           contact me
         </h2>
       </div>
       <div className="flex flex-col md:flex-row items-center justify-center p-12 w-full ">
       <div className="mx-auto w-full max-w-[550px] pr-2.5">
         <div className='skill-header text-center pb-2.5 max-[500px]:overflow-x-auto'>
-          <h2 className='text-center text-3xl pb-2.5 font-mono text-[#e65101] uppercase'>
+          <h2 className='text-center text-3xl pb-2.5 font-mono text-[#e65101] uppercase dark:text-[#FAE3B4] dark:font-bold'>
             Contact me here
           </h2>
          
             {contacts.map((item, index) => (
                 <div key={index} className='flex flex-row justify-between w-full p-2 min-w-[400px]'>
                   <div className='flex items-center justify-between'>
-                    <FontAwesomeIcon className='font-[10px] w-4 h-4' icon={item.icon} />
-                    <span className='font-mono pl-2.5'>{item.label} : </span>
+                    <FontAwesomeIcon className='font-[10px] w-4 h-4 dark:text-[#FAE3B4] dark:font-bold' icon={item.icon} />
+                    <span className='font-mono pl-2.5 dark:text-[#FAE3B4]'>{item.label} : </span>
                   </div>
                   <div>
-                    <span className='font-mono'>{item.value}</span>
+                    <span className='font-mono dark:text-[#FAE3B4]'>{item.value}</span>
                   </div>
               </div>
             ))}
@@ -87,7 +87,7 @@ const Contact = () => {
               </div>
               <div>
                 <button
-                  className="hover:shadow-form rounded-md bg-[#e65101] py-1 px-4 text-base font-semibold text-white font-mono outline-none"
+                  className="hover:shadow-form rounded-md bg-[#e65101] dark:text-[#FAE3B4] dark:font-bold dark:bg-slate-700 text-base font-semibold text-white font-mono outline-none"
                 >
                   Submit
                 </button>
