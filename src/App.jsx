@@ -31,7 +31,10 @@ const App = () => {
         <div className="flex items-center justify-center w-full my-8">
           <label for="toggle" className="flex items-center cursor-pointer">
             <input type="checkbox" id="toggle" className="sr-only peer" onChange={darkModeHandler}/>
-            <div className="block relative dark:bg-[#f2f2f0] bg-slate-800 w-16 h-9 p-1 rounded-full before:absolute before:bg-[#e65101] before:w-7 before:h-7 before:p-1 before:rounded-full before:transition-all before:duration-500 before:left-1 peer-checked:before:left-8 peer-checked:before:bg-slate-800"></div>
+            <div className="block relative dark:bg-[#f2f2f0] bg-slate-800 w-16 h-9 p-1 rounded-full 
+            before:absolute before:bg-[#e65101] before:w-7 before:h-7 before:p-1 before:rounded-full 
+            before:transition-all before:duration-500 before:left-1 peer-checked:before:left-8 
+            peer-checked:before:bg-slate-800"></div>
           </label>
         </div>
       </div>
@@ -62,7 +65,8 @@ const App = () => {
       <nav className='hidden max-[360px]:flex min-[360px]:hidden w-full fixed inset-x-0 bottom-0  z-50 md:hidden shadow-inner'>
         <ol className='flex flex-row md:hidden w-full justify-center bg-white shadow-md gap-2'>
           {navItems.map((item, index) => (
-            <li key={index} title={item} className={`px-3 py-2 hover:!text-white hover:bg-[#e65101] rounded-xl shadow-inner text-center cursor-pointer ${active === item.toLowerCase() ? 'text-white bg-[#e65101]' : ''}`} onClick={()=> {setActive(item.toLowerCase())}}>
+            <li key={index} title={item} className={`px-3 py-2 hover:!text-white hover:bg-[#e65101] 
+                  rounded-xl shadow-inner text-center cursor-pointer ${active === item.toLowerCase() ? 'text-white bg-[#e65101]' : ''}`} onClick={()=> {setActive(item.toLowerCase())}}>
               <Link className="hover:text-white text-[#541600]" to={`/${item.toLowerCase()}`}>
                 <FontAwesomeIcon icon={iconMap[item]} />
               </Link>
@@ -70,7 +74,7 @@ const App = () => {
           ))}
         </ol>
       </nav>
-      <div className='h-screen bg-[#f2f2f0] dark:bg-slate-800'>
+      <div className=' bg-[#f2f2f0] dark:bg-slate-800'>
         <Routes className='z-0'>
           <Route path='/' element={<Home />}/>
           <Route path='/home' element={<Home />}/>

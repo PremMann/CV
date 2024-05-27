@@ -20,13 +20,14 @@ const Portfolio = () => {
               </div>
               <div className='hidden group group-hover:block rounded-md bg-neutral-900/50 p-8 text-center shadow hover:bg-[#FFF5EE]
                 cursor-pointer bg-cover bg-center h-[300px] place-content-center shadow-xl
-                transition ease-in-outhover:-translate-y-1 hover:scale-10  dark:hover:bg-slate-700' >
-                <div className='flex flex-col items-center content-center dark:bg-slate-700'>
-                  <h2 className='text-balance text-center text-3xl pb-2.5 font-mono text-[#e65101] uppercase'>
+                transition ease-in-outhover:-translate-y-1 hover:scale-10 dark:hover:bg-slate-700' >
+                <div className='flex flex-col items-center content-center'>
+                  <h2 className='text-balance text-center text-3xl pb-2.5 font-mono text-[#e65101] uppercase dark:text-[#FAE3B4]'>
                     {item.name}
                   </h2>
-                  <FontAwesomeIcon className='border border-[#e0e0e0] bg-white dark:bg-slate-700 hover:border-[#e65101] hover:bg-[#e65101] dark:hover:border-slate-700 dark:hover:bg-slate-700 shadow-xl hover:text-white p-2.5 rounded-full cursor-pointer
-            transition ease-in-out  hover:-translate-y-1 hover:scale-10  w-4 h-4' icon={faLink} />
+                  <FontAwesomeIcon className='border border-[#e0e0e0] bg-white dark:bg-slate-700 hover:border-[#e65101] 
+                  hover:bg-[#e65101] dark:hover:border-[#FAE3B4] dark:hover:bg-slate-700 shadow-xl hover:text-white p-2.5 
+                  rounded-full cursor-pointer transition ease-in-out  hover:-translate-y-1 hover:scale-10 dark:text-[#FAE3B4] w-4 h-4' icon={faLink} />
                 </div>
               </div>
             </div>
