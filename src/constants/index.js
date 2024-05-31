@@ -134,19 +134,22 @@ const experiences = [
       id:1,
       name:'BONGTHOM.COM',
       link:'bongthom.com',
-      image:btdc
+      image:btdc,
+      url:'https://bongthom.com/'
     },
     {
       id:2,
       name:'Bongthom control panel',
       link:'account.bongthom.com',
-      image:btdccp
+      image:btdccp,
+      url:'https://account.bongthom.com/'
     },
     {
       id:3,
       name:'PREM PORTFOLIO PAGE',
       link:'prem.info',
-      image:homecv
+      image:homecv,
+      url:'https://account.bongthom.com/'
     }
   ];
 

@@ -39,11 +39,20 @@ const Contact = () => {
         </div>
         <div className='skill-header text-center pb-2.5'>
           <div className='pb-2 flex justify-center pt-3.5 gap-3'>
+            <a href="https://t.me/prem_mann" target="_blank" rel="noopener noreferrer">
               <IconHover info={'Telegram'} icon={faTelegram} />
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100009897630158" target="_blank" rel="noopener noreferrer">
               <IconHover info={'Facebook'} icon={faFacebook} />
+            </a>
+            <a href="https://github.com/PremMann" target="_blank" rel="noopener noreferrer">
               <IconHover info={'Github'} icon={faGithub} />
+            </a>
+            <a href="https://www.linkedin.com/in/prem-mann-99b874141/" target="_blank" rel="noopener noreferrer">
               <IconHover info={'LinkedIn'} icon={faLinkedin} />
-            </div>
+            </a>
+            
+          </div>
         </div>
 
       </div>

@@ -4,11 +4,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import { experiences, skills } from '../constants';
-
+import cv from "./../../public/cv.pdf";
 
 const ExperienceCard = ({ experience, dark }) => (
-  <VerticalTimelineElement
-    
+
+  <VerticalTimelineElement    
     contentStyle={{ background: dark ? 'rgb(51 65 85)' : 'rgb(255,245,238)', color: '#fff'}}
     contentArrowStyle={{ borderRight: '7px solid #fff5ee'}}
     date={experience.date}
@@ -46,6 +46,13 @@ const ExperienceCard = ({ experience, dark }) => (
 
 const About = ({ dark }) => {
  
+  const downloadCV = () => {
+    const cvURL = cv; 
+    const link = document.createElement('a');
+    link.href = cvURL;
+    link.download = 'PREM-MANN.pdf'; 
+    link.click();
+  };
   return (
     <div className="about pt-14 w-full flex flex-col">
       <div className='header p-2.5 flex flex-col justify-center items-center'>
@@ -61,7 +68,7 @@ const About = ({ dark }) => {
             In addition, I have experience working with PHP and React Native.
           </span>
         </div>
-        <div className='pb-2 flex justify-center pt-3.5'>
+        <div className='pb-2 flex justify-center pt-3.5' onClick={downloadCV}>
               <a className='flex flex-row justify-between pl-3 content-center text-[#541600] dark:text-[#FAE3B4]
                             w-[170px] items-center border border-[#e65101] dark:border-[#FAE3B4] rounded-full cursor-pointer
                             hover:bg-[#e65101] hover:text-white'>

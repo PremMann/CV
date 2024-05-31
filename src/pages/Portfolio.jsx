@@ -25,9 +25,12 @@ const Portfolio = () => {
                   <h2 className='text-balance text-center text-3xl pb-2.5 font-mono text-[#e65101] uppercase dark:text-[#FAE3B4]'>
                     {item.name}
                   </h2>
-                  <FontAwesomeIcon className='border border-[#e0e0e0] bg-white dark:bg-slate-700 hover:border-[#e65101] 
-                  hover:bg-[#e65101] dark:hover:border-[#FAE3B4] dark:hover:bg-slate-700 shadow-xl hover:text-white p-2.5 
-                  rounded-full cursor-pointer transition ease-in-out  hover:-translate-y-1 hover:scale-10 dark:text-[#FAE3B4] w-4 h-4' icon={faLink} />
+                  <a href={item.url} target="_blank" rel="noopener noreferrer">
+                    <FontAwesomeIcon className='border border-[#e0e0e0] bg-white dark:bg-slate-700 hover:border-[#e65101] 
+                    hover:bg-[#e65101] dark:hover:border-[#FAE3B4] dark:hover:bg-slate-700 shadow-xl hover:text-white p-2.5 
+                    rounded-full cursor-pointer transition ease-in-out  hover:-translate-y-1 hover:scale-10 dark:text-[#FAE3B4] w-4 h-4' icon={faLink} />
+                  </a>
+                  
                 </div>
               </div>
             </div>

@@ -3,8 +3,18 @@ import homeImage from './../../public/profiles.jpeg'
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import 'react-vertical-timeline-component/style.min.css';
-
+import cv from "./../../public/cv.pdf";
 const Home = () => {
+
+  const downloadCV = () => {
+    const cvURL = cv; 
+    const link = document.createElement('a');
+    link.href = cvURL;
+    link.download = 'PREM-MANN.pdf';
+    link.click();
+  };
+
+
   return (
       <div className="grid md:grid-cols-2 h-screen ">
         <div className="h-full rounded-lg flex items-center p-10">
@@ -16,7 +26,7 @@ const Home = () => {
               I'm a frontend developer based in the city of Phnom Penh, Cambodia. 
               I'm a passionate about creating beautiful and functional websites.
             </p>
-            <div className='pb-2 flex justify-center'>
+            <div className='pb-2 flex justify-center cursor-pointer' onClick={downloadCV}>
               <a className='flex flex-row justify-between pl-3 content-center text-[#541600] dark:text-[#FAE3B4]
                             w-[170px] items-center border border-[#e65101] dark:border-[#FAE3B4] rounded-full cursor-pointer
                             hover:bg-[#e65101] hover:text-white'>
