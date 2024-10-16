@@ -10,7 +10,7 @@ const Home = () => {
     const cvURL = cv; 
     const link = document.createElement('a');
     link.href = cvURL;
-    link.download = 'PREM-MANN.pdf';
+    link.download = 'PREM-MANN.pdf'; 
     link.click();
   };
 
