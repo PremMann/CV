@@ -19,7 +19,7 @@ const Contact = () => {
       <div className="flex flex-col md:flex-row items-center justify-center p-12 w-full ">
       <div className="mx-auto w-full max-w-[550px] pr-2.5">
         <div className='skill-header text-center pb-2.5 max-[500px]:overflow-x-auto'>
-          <h2 className='text-center text-3xl pb-2.5 font-mono text-[#e65101] uppercase dark:text-[#FAE3B4] dark:font-bold'>
+          <h2 className='text-center text-3xl pb-2.5 font-mono text-[#e65101] uppercase dark:text-[#FAE3B4] dark:font-bold testing'>
             Contact me here
           </h2>
          
