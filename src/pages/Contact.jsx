@@ -24,7 +24,7 @@ const Contact = () => {
           </h2>
          
             {contacts.map((item, index) => (
-                <div key={index} className='flex flex-row justify-between w-full p-2 min-w-[400px]'>
+                <div key={index} className='flex flex-row justify-between w-full p-2 min-w-[400px] testing'>
                   <div className='flex items-center justify-between'>
                     <FontAwesomeIcon className='font-[10px] w-4 h-4 dark:text-[#FAE3B4] dark:font-bold' icon={item.icon} />
                     <span className='font-mono pl-2.5 dark:text-[#FAE3B4]'>{item.label} : </span>
