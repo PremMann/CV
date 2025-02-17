@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import homeImage from './../../public/profiles.jpeg'
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import 'react-vertical-timeline-component/style.min.css';
 import cv from "./../../public/cv.pdf";
 import cv2 from "./../../public/PREM_MANN-Web_Application_Developer.pdf";
+import KaTaskTracking from './../components/KaTaskTracking'
 const Home = () => {
+
+  const [currentStage, setCurrentStage] = useState(2);
 
   const downloadCV = () => {
     const cvURL = cv2; 
@@ -18,6 +21,9 @@ const Home = () => {
 
   return (
       <div className="grid md:grid-cols-2 h-screen ">
+        {/* <div className="container mx-auto mt-10">
+          <KaTaskTracking currentStage={currentStage} />
+        </div> */}
         <div className="h-full rounded-lg flex items-center p-10">
           <img className="w-full rotate-90 object-cover rounded-lg" src={homeImage} alt="Modern building architecture" />
         </div>
