@@ -4,10 +4,11 @@ import { faDownload } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import 'react-vertical-timeline-component/style.min.css';
 import cv from "./../../public/cv.pdf";
+import cv2 from "./../../public/PREM_MANN-Web_Application_Developer.pdf";
 const Home = () => {
 
   const downloadCV = () => {
-    const cvURL = cv; 
+    const cvURL = cv2; 
     const link = document.createElement('a');
     link.href = cvURL;
     link.download = 'PREM-MANN.pdf'; 
