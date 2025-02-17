@@ -61,11 +61,11 @@ const About = ({ dark }) => {
             About me 
           </h2>
           <span className='font-mono dark:text-[#FAE3B4] '>
-            Hi there, my name is Prem MANN and I'm a software developer with experience in web application 
-            development. I'm currently working as a frontend Developer at Krawma & Associates, 
-            where I specialize in billing systems development and optimizing applications for maximum speed and scalability. 
-            My expertise in front-end development includes proficiency in technologies such as JavaScript, React.js, and Tailwind CSS. 
-            In addition, I have experience working with PHP and React Native.
+            Web Developer specializing in API development, UI/UX design, and full-stack testing. 
+            Skilled in building scalable applications with React.js, Laravel (Eloquent), and PostgreSQL. Experienced in test
+             automation with Cypress and improving system performance. Expanding knowledge in full-stack development with Next.js, 
+             Prisma ORM, and Docker. Passionate about researching new technologies and driving innovation. Strong team player in Agile environments, 
+             ensuring timely and high-quality software delivery.
           </span>
         </div>
         <div className='pb-2 flex justify-center pt-3.5' onClick={downloadCV}>
