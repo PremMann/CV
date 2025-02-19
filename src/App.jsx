@@ -63,11 +63,11 @@ const App = () => {
       </nav>
 
       <nav className='hidden max-[360px]:flex min-[360px]:hidden w-full fixed inset-x-0 bottom-0  z-50 md:hidden shadow-inner'>
-        <ol className='flex flex-row md:hidden w-full justify-center bg-white shadow-md gap-2'>
+        <ol className='flex flex-row md:hidden w-full justify-center bg-white dark:bg-slate-800 shadow-md gap-2'>
           {navItems.map((item, index) => (
-            <li key={index} title={item} className={`px-3 py-2 hover:!text-white hover:bg-[#e65101] 
+            <li key={index} title={item} className={`px-3 py-2 hover:!text-white dark:bg-white hover:bg-[#e65101] hover:!text-white
                   rounded-xl shadow-inner text-center cursor-pointer ${active === item.toLowerCase() ? 'text-white bg-[#e65101]' : ''}`} onClick={()=> {setActive(item.toLowerCase())}}>
-              <Link className="hover:text-white text-[#541600]" to={`/${item.toLowerCase()}`}>
+              <Link className="hover:text-white" to={`/${item.toLowerCase()}`}>
                 <FontAwesomeIcon icon={iconMap[item]} />
               </Link>
             </li>
