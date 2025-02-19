@@ -19,17 +19,17 @@ const Contact = () => {
       <div className="flex flex-col md:flex-row items-center justify-center p-12 w-full ">
       <div className="mx-auto w-full max-w-[550px] pr-2.5">
         <div className='skill-header text-center pb-2.5 max-[500px]:overflow-x-auto'>
-          <h2 className='text-center text-3xl pb-2.5 font-mono text-[#e65101] uppercase dark:text-[#FAE3B4] dark:font-bold'>
+          {/* <h2 className='text-center text-3xl pb-2.5 font-mono text-[#e65101] uppercase dark:text-[#FAE3B4] dark:font-bold'>
             Contact me here
-          </h2>
+          </h2> */}
          
             {contacts.map((item, index) => (
-                <div key={index} className='flex flex-row justify-between w-full p-2 min-w-[400px]'>
-                  <div className='flex items-center justify-between'>
+                <div key={index} className='flex flex-col justify-starts md:flex-row md:justify-between w-full p-2 min-w-[400px] gap-2.5'>
+                  <div className='flex items-center justify-start md:justify-between'>
                     <FontAwesomeIcon className='font-[10px] w-4 h-4 dark:text-[#FAE3B4] dark:font-bold' icon={item.icon} />
                     <span className='font-mono pl-2.5 dark:text-[#FAE3B4]'>{item.label} : </span>
                   </div>
-                  <div>
+                  <div className='text-left p-0.5'>
                     <span className='font-mono dark:text-[#FAE3B4]'>{item.value}</span>
                   </div>
               </div>
@@ -56,7 +56,7 @@ const Contact = () => {
         </div>
 
       </div>
-          <div className="mx-auto w-full max-w-[550px] pl-2.5">
+          {/* <div className="mx-auto w-full max-w-[550px] pl-2.5">
             <form action="#" method="POST">
               <div className="mb-5">
                 <input
@@ -103,7 +103,7 @@ const Contact = () => {
               </div>
             </form>
             
-          </div>
+          </div> */}
         
         </div>
     </div>
