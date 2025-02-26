@@ -39,7 +39,7 @@ const App = () => {
         </div>
       </div>
 
-      <nav className='z-0 fixed top-0 left-0 w-full bg-white shadow-md bg-[#f2f2f0] dark:bg-slate-800'>
+      <nav className='z-[1000] fixed top-0 left-0 w-full bg-white shadow-md bg-[#f2f2f0] dark:bg-slate-800'>
         <ol className='hidden md:flex justify-center'>
           {navItems.map((item, index) => (
             <li key={index} className={`p-2.5 hover:!text-white hover:bg-[#e65101] dark:text-[#FAE3B4] cursor-pointer ${active === item.toLowerCase() ? 'dark:text-white text-[#e65101]' : ''}`} onClick={()=> {setActive(item.toLowerCase())}}>

@@ -61,11 +61,14 @@ const About = ({ dark }) => {
             About me 
           </h2>
           <span className='font-mono dark:text-[#FAE3B4] '>
-            Web Developer specializing in API development, UI/UX design, and full-stack testing. 
-            Skilled in building scalable applications with React.js, Laravel (Eloquent), and PostgreSQL. Experienced in test
-             automation with Cypress and improving system performance. Expanding knowledge in full-stack development with Next.js, 
-             Prisma ORM, and Docker. Passionate about researching new technologies and driving innovation. Strong team player in Agile environments, 
-             ensuring timely and high-quality software delivery.
+            Experienced Web Developer with a strong background in full-stack 
+            development, specializing in React.js, PHP (CodeIgniter, Laravel), and 
+            PostgreSQL. Proficient in building scalable and high-performance 
+            applications, implementing RESTful APIs, and optimizing UI/UX consistency. 
+            Currently working at Krawma & Associates Co., Ltd., I contribute to the 
+            development and enhancement of the BongThom platform, focusing on API 
+            integration, frontend improvements, and system performance optimization. I 
+            actively participate in Agile (Scrum) development, collaborating with cross￾functional teams to deliver high-quality software solutions. 
           </span>
         </div>
         <div className='pb-2 flex justify-center pt-3.5' onClick={downloadCV}>
