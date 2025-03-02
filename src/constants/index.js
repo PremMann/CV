@@ -9,6 +9,8 @@ import git from "/public/tech/git.png";
 import Bootstrap from "/public/tech/bootstrap.png";
 import tailwind from "/public/tech/tailwind.png";
 import homecv from "/public/homecv.png";
+import vercel from "/public/vercelhomepage.png";
+
 import Javascript from "/public/tech/javascript.png";
 import { 
   faDownload, 
@@ -149,6 +151,13 @@ const experiences = [
       link:'prem.info',
       image:homecv,
       url:'https://account.bongthom.com/'
+    },
+    {
+      id:4,
+      name:'PREM PORTFOLIO PAGE',
+      link:'https://cpl-six.vercel.app/',
+      image:vercel,
+      url:'https://cpl-six.vercel.app/'
     }
   ];
 
