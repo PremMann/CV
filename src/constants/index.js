@@ -10,6 +10,7 @@ import Bootstrap from "/public/tech/bootstrap.png";
 import tailwind from "/public/tech/tailwind.png";
 import homecv from "/public/homecv.png";
 import vercel from "/public/vercelhomepage.png";
+import ap from "/public/ap.png";
 
 import Javascript from "/public/tech/javascript.png";
 import { 
@@ -23,22 +24,68 @@ import btdc from "/public/btdc.png";
 import btdccp from "/public/btdccp.png";
 
 const experiences = [
-    {
-      title: "Web development",
-      company_name: "Krawma & Associates",
-      iconBg: "white",
-      icon: krawma,
-      date: "Feb 2022 - Present",
-      points: [
-       "Responsible for creating new features and services for the BongThom website backend, frontend, and mobile app.",
-       "Implemented APIs for CV registration gateway and other features to improve platform functionality",
-       "Conducted thorough testing and maintenance to fix bugs and improve system stability",
-       "Designed and developed a reusable UI library to improve consistency and efficiency across the BongThom backend and frontend applications",
-       "Presented key deliverables in sprint planning meetings by demoing user stories and finished features to the Product Owner, facilitating informed decision-making",
-       "Participated in Agile development processes, including sprint planning, daily stand-ups, and retrospective meetings",
-       "Researched and implemented new technologies to enhance system performance and maintainability",
-      ],
-    },
+  {
+    title: "IT Programming Leader",
+    company_name: "Active People's Microfinance Institution Plc.",
+    iconBg: "white",
+    icon: ap,
+    date: "May 2025 - Present",
+    points: [
+      {
+        point: "General IT Support:",
+        sub_point: [
+          "Troubleshoot and fix technical issues.",
+          "Manage Windows OS and Microsoft Office license activations and reactivations.",
+          "Setting up and configuring PCs, email accounts, and devices (e.g., fingerprint scanners, printers).",
+          "Troubleshooting hardware and software issues (internet, email, Excel, scanning, peripherals, etc.).",
+          "Fix PC issues from all branches."
+        ]
+      },
+      {
+        point: "GLPI System Development & Support:",
+        sub_point: [
+          "Serve as a technical contact for the Helpdesk system, collaborating with Bong Piroth for development, testing, and support.",
+          "Work with IT Manager and Deputy IT Manager to gather and clarify system requirements.",
+          "Responsible for bridging technical work with business needs in the GLPI system."
+        ]
+      },
+      {
+        point: "AP Customer App:",
+        sub_point: [
+          "Business Analyst (BA):",
+          "Gather and analyze business requirements",
+          "Identify and document system specifications and workflows",
+          "Bridge the gap between business needs and technical solutions",
+          "Facilitate communication between stakeholders and developers",
+          "Create functional specifications and use cases",
+          "Assist in validating solutions against business needs",
+          "Quality Assurance (QA):",
+          "Develop test plans, test cases, and test scripts",
+          "Conduct manual and automated testing",
+          "Identify, document, and track bugs or defects",
+          "Ensure product meets functional and performance requirements",
+          "Collaborate with developers to reproduce and fix issues",
+          "Contribute to continuous improvement of testing processes"
+        ]
+      }
+    ]
+  },
+  {
+    title: "Web development",
+    company_name: "Krawma & Associates",
+    iconBg: "white",
+    icon: krawma,
+    date: "Feb 2022 - May 2025",
+    points: [
+      "Responsible for creating new features and services for the BongThom website backend, frontend, and mobile app.",
+      "Implemented APIs for CV registration gateway and other features to improve platform functionality",
+      "Conducted thorough testing and maintenance to fix bugs and improve system stability",
+      "Designed and developed a reusable UI library to improve consistency and efficiency across the BongThom backend and frontend applications",
+      "Presented key deliverables in sprint planning meetings by demoing user stories and finished features to the Product Owner, facilitating informed decision-making",
+      "Participated in Agile development processes, including sprint planning, daily stand-ups, and retrospective meetings",
+      "Researched and implemented new technologies to enhance system performance and maintainability",
+    ],
+  },
     {
       title: "Web Developer (PHP)",
       company_name: "ALLWEB Co., Ltd",

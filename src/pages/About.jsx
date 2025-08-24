@@ -33,13 +33,32 @@ const ExperienceCard = ({ experience, dark }) => (
         {experience.company_name}
       </p>
     </div>
-    <ul className="mt-5 list-disc ml-5 space-y-2">
-        {experience.points.map((point, index) => (
-          <li kay={`experience-point-${index}`} className="text-white-100 text-[14px] pl-1 tracking-wider text-slate-950 font-mono dark:text-[#FAE3B4]">
-              {point}
+    {Array.isArray(experience.points) && typeof experience.points[0] === 'object' && experience.points[0] !== null ? (
+      <ul className="mt-5 list-disc ml-5 space-y-2">
+        {experience.points.map((item, index) => (
+          <li key={`experience-point-${index}`} className="text-white-100 text-[14px] pl-1 tracking-wider text-slate-950 font-mono dark:text-[#FAE3B4]">
+            {item.point}
+            {item.sub_point && item.sub_point.length > 0 && (
+              <ul className="mt-2 list-disc ml-8 space-y-1">
+                {item.sub_point.map((sub, idx) => (
+                  <li key={`experience-sub-point-${index}-${idx}`} className="text-[13px] text-slate-700 dark:text-[#FAE3B4] font-mono">
+                    {sub}
+                  </li>
+                ))}
+              </ul>
+            )}
           </li>
         ))}
-    </ul>
+      </ul>
+    ) : (
+      <ul className="mt-5 list-disc ml-5 space-y-2">
+        {experience.points.map((point, index) => (
+          <li key={`experience-point-${index}`} className="text-white-100 text-[14px] pl-1 tracking-wider text-slate-950 font-mono dark:text-[#FAE3B4]">
+            {point}
+          </li>
+        ))}
+      </ul>
+    )}
 
   </VerticalTimelineElement>
 )
