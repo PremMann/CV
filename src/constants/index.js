@@ -8,6 +8,13 @@ import css from "/public/tech/css.png";
 import git from "/public/tech/git.png";
 import Bootstrap from "/public/tech/bootstrap.png";
 import tailwind from "/public/tech/tailwind.png";
+import typescript from "/public/tech/typescript.png";
+import nodejs from "/public/tech/nodejs.png";
+import docker from "/public/tech/docker.png";
+import next from "/public/tech/Next.js.png";
+import postgress from "/public/tech/PostgresSQL.png";
+import prisma from "/public/tech/prisma-4.svg";
+import vite from "/public/tech/Vite.js.png";
 import homecv from "/public/homecv.png";
 import vercel from "/public/vercelhomepage.png";
 import ap from "/public/ap.png";
@@ -142,6 +149,10 @@ const experiences = [
         icon: reactjs,
         label: 'ReactJS'
     },
+  {
+    icon: next,
+    label: 'Next.js'
+  },
     {
         icon: Bootstrap,
         label: 'Bootstrap'
@@ -170,9 +181,37 @@ const experiences = [
         icon: Javascript,
         label: 'Javascript'
     },
+  {
+    icon: typescript,
+    label: 'TypeScript'
+  },
+  {
+    icon: nodejs,
+    label: 'Node.js'
+  },
+  {
+    icon: prisma,
+    label: 'Prisma'
+  },
+    {
+    icon: vite,
+    label: 'Vite'
+  },
+  {
+    icon: next,
+    label: 'NextAuth'
+  },
+  {
+    icon: docker,
+    label: 'Docker'
+  },
     {
         icon: html,
         label: 'HTML'
+    },
+    {
+      icon: postgress,
+      label: 'PostgreSQL'
     },
 
   ];
