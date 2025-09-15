@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import { experiences, skills } from '../constants';
-import cv from "./../../public/tech/PREM_MANN-Web_Application_Developer.pdf";
+import cv from "./../../public/PREM_MANN-Web_Application_Developer.pdf";
 
 const ExperienceCard = ({ experience, dark }) => (
   <VerticalTimelineElement

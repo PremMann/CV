@@ -4,7 +4,7 @@ import { faDownload } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import 'react-vertical-timeline-component/style.min.css';
 import cv from "./../../public/cv.pdf";
-import cv2 from "./../../public/tech/PREM_MANN-Web_Application_Developer.pdf";
+import cv2 from "./../../public/PREM_MANN-Web_Application_Developer.pdf";
 import KaTaskTracking from './../components/KaTaskTracking'
 const Home = () => {
 
