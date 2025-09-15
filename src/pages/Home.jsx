@@ -29,7 +29,7 @@ const Home = () => {
         </div>
         <div className="flex flex-col justify-end md:justify-center pb-0 p-10 md:p-10 order-first md:order-last">
             <h1 className="text-5xl pb-5 font-mono text-[#e65101] dark:text-[#FAE3B4]">
-                Full-Stack Developer
+                Web Applications Developer
               </h1>
               <p className="font-mono pb-2.5 text-[#541600] dark:text-[#FAE3B4]">
                 I design and build scalable web applications using React.js and Next.js. 

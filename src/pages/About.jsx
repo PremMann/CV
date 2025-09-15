@@ -64,9 +64,11 @@ const About = ({ dark }) => {
       <section className="w-full flex flex-col items-center justify-center pt-20 pb-10 px-4">
         <div className="max-w-2xl w-full text-center">
           <h1 className="text-4xl md:text-5xl font-extrabold font-mono text-slate-900 dark:text-[#FAE3B4] mb-2">Prem Mann</h1>
-          <h2 className="text-lg md:text-2xl font-mono text-slate-500 dark:text-slate-300 mb-4">Full-Stack Developer </h2>
+          <h2 className="text-lg md:text-2xl font-mono text-slate-500 dark:text-slate-300 mb-4">Web Applications Developer</h2>
           <p className="text-base md:text-lg text-slate-700 dark:text-slate-300 font-mono mb-6">
-            Experienced Web Developer specializing in React.js, PHP (CodeIgniter, Laravel), and PostgreSQL. Passionate about building scalable, high-performance applications and delivering clean, consistent UI/UX. Currently at Krawma & Associates Co., Ltd., focusing on API integration, frontend improvements, and system optimization.
+            I design and build scalable web applications using React.js and Next.js. 
+                Passionate about full-stack development, automated testing, and modern tools such as Prisma and Docker, 
+                I’m always learning and focused on delivering high-quality, maintainable software.
           </p>
           <button
             onClick={downloadCV}
