@@ -236,11 +236,11 @@ const experiences = [
       name:'PREM PORTFOLIO PAGE',
       link:'prem.info',
       image:homecv,
-      url:'https://account.bongthom.com/'
+      url:'https://www.prem-mann.info/'
     },
     {
       id:4,
-      name:'PREM PORTFOLIO PAGE',
+      name:'Active People Microfinance Institution Plc.',
       link:'https://cpl-six.vercel.app/',
       image:vercel,
       url:'https://cpl-six.vercel.app/'
